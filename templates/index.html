@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/imagenes.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/album.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/seccion.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/body.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/marco.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/calendario.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/cerrar.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/settings.css')}}">
+</head>
+<body>
+    <div id="contenedor-opciones" class="opciones-conteiner">
+        {% for boton in opciones.botones %}
+        <button id="{{ boton }}" class="boton" onclick="{{boton}}()">{{ boton | replace('_', ' ') }}</button>
+        {% endfor %}
+    </div>
+    <div class="menu-container">
+        <div id="info">
+            <div class="time">
+                <p>18:52</p>
+                <span>2024-12-10 Martes</span>
+            </div>
+            <div class="weather">
+                <p>Arequipa</p>
+                <p>8°C</p>
+                <p>Partly cloudy (day)<br>13°C~18°C</p>
+            </div>
+        </div>
+        <div class="opciones-menu-conteiner">
+            <ul>
+                {% for item, image_url in zip(opciones.menu_items, imagenes['imgs_menu']) %}
+                    <li>
+                        <a href="#{{ item }}" id="{{ item }}"  class="menu-button" >
+                            <img src="{{ image_url }}" alt="{{ item }}" />
+                            <span>{{ item | capitalize }}</span>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div id="images-container" class="images-container">
+        <img id="image1" src="{{ image1 }}" alt="Imagen 1">
+        <img id="image0" src="{{ image0 }}" alt="Imagen 0">
+    </div>
+    <div id="album-container" class="contenido-emergente">
+        <button id="cerrar" onclick="close_('album')" class="cerrar-class">cerrar</button>
+        <div id="seccion">
+        </div>
+    </div>
+    <script>
+        const wireless_url_image = "{{ url_for('static', filename='img/img_boton/wireless.png') }}";
+        const device_url_image = "{{ url_for('static', filename='img/img_boton/device.png') }}";
+        const frame_url_image = "{{ url_for('static', filename='img/img_boton/frame.png') }}";
+        const datetime_url_image = "{{ url_for('static', filename='img/img_boton/date.png') }}";
+        const storage_url_image = "{{ url_for('static', filename='img/img_boton/storag.png') }}";
+        const system_url_image = "{{ url_for('static', filename='img/img_boton/system.png') }}";
+        const about_url_image = "{{ url_for('static', filename='img/img_boton/about.png') }}";
+    </script>
+    <script src="{{url_for('static',filename='js/script.js')}}"></script>
+    <script src="{{url_for('static',filename='js/marco.js')}}"></script>
+    <script src="{{url_for('static',filename='js/album.js')}}"></script>
+    <script src="{{url_for('static',filename='js/seccion.js')}}"></script>
+    <script src="{{url_for('static',filename='js/seccion2.js')}}"></script>
+    <script src="{{url_for('static',filename='js/opciones.js')}}"></script>
+    <script src="{{url_for('static',filename='js/calendario.js')}}"></script>
+</body>
+</html>

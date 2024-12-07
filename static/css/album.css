@@ -1,0 +1,70 @@
+
+#album-container{
+    position: absolute;
+    /*  width: 50%;
+     margin-bottom: 11%;
+    height: 46%;*/
+    width: 90%;
+    height: 90%;
+    max-height: 90%;
+    z-index: 15;
+    font-size: 200%;/* Fondo semitransparente */
+    color: #333; /* Color del texto 
+    border: 2px solid #ccc; /* Borde sutil */
+    border-radius: 50px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: all 0.3s ease, opacity 0.3s ease; 
+    visibility: hidden; 
+    opacity: 0; 
+}
+
+#album-container.mostrar {
+    visibility: visible; /* Visible cuando se activa */
+    opacity: 1; /* Totalmente opaco cuando está visible */
+    background-color: rgba(41, 26, 139, 0); /* Fondo con transparencia */
+}
+#album-container h1 {
+       font-size: 2.5rem;
+       margin-bottom: 15px;
+       color: #222; /* Color del título */
+       text-align: center;
+   }
+   
+   /* Estilo para la lista */
+   #album-container ul {
+       list-style-type: none; /* Quitar puntos de lista */
+       padding: 0;
+       margin: 0;
+       transition: background 0.3s ease, transform 0.3s ease; /
+   }
+   
+   #album-container li {
+       padding: 10px;
+       margin-bottom: 5px;
+       background: #f9f9f9; /* Fondo ligero para los elementos */
+       border: 1px solid #ddd; /* Bordes sutiles */
+       border-radius: 5px;
+       transition: background 0.3s ease, transform 0.3s ease; /* Transiciones */
+   }
+   
+   #album-container li:hover {
+       background: #eaeaea; /* Fondo más oscuro al pasar el mouse */
+       transform: scale(1.03); /* Ligeramente más grande */
+   }
+   
+   /* Estilo para el mensaje cuando no hay álbumes */
+   #album-container p {
+       font-size: 1.2rem;
+       color: #666;
+       text-align: center;
+       margin-top: 20px;
+   }
+   
+   /* Responsividad */
+   @media (max-width: 768px) {
+       #album-container {
+           width: 80%; /* Ajustar ancho en pantallas más pequeñas */
+           font-size: 1rem; /* Reducir tamaño de fuente */
+       }
+   }

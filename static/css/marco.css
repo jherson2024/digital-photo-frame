@@ -1,0 +1,31 @@
+
+#marco_ h3 {
+    font-size: 0.9em;
+    color: #333;
+    margin-bottom: 0px;
+    margin-top:0px;
+}
+
+#marco_ img {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0px 0;
+    max-width: 100%;
+    height: auto;
+}
+
+#marco_ p {
+    font-size: 0.6em;
+    color: #555;
+    margin: 5px 0;
+}
+
+#marco_ p:nth-child(3) {
+    font-weight: bold;
+    color: #726c6c;
+}
+
+#marco_ p:nth-child(4) {
+    font-weight: bold;
+    color: #28a745;
+}

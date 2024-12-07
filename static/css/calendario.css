@@ -1,0 +1,91 @@
+:root {
+    --calendar-scale: 1.4; /* Cambia este valor para escalar todo */
+}
+
+/* Contenedor del calendario */
+.calendar-container {
+    background: #e8a1a1; /* Fondo blanco */
+    border: calc(1px * var(--calendar-scale)) solid #ccc; /* Borde escalado */
+    border-radius: calc(10px * var(--calendar-scale)); /* Esquinas redondeadas escaladas */
+    box-shadow: 0 calc(4px * var(--calendar-scale)) calc(6px * var(--calendar-scale)) rgba(0, 0, 0, 0.1); /* Sombra escalada */
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column;
+    padding: calc(20px * var(--calendar-scale)); /* Espaciado interno escalado */
+    width: calc(70% * var(--calendar-scale)); /* Ancho escalado */
+    height: calc(80% * var(--calendar-scale)); /* Altura escalada */
+}
+
+/* Encabezado del calendario */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 0 auto; /* El encabezado ocupa solo el espacio necesario */
+    margin-bottom: calc(10px * var(--calendar-scale)); /* Margen inferior escalado */
+}
+
+.calendar-header h1 {
+    margin: 0;
+    font-size: calc(24px * var(--calendar-scale)); /* Tamaño de fuente escalado */
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #333;
+}
+
+/* Botones de navegación */
+.nav-button {
+    background: #eae0c8; /* Fondo beige */
+    border: calc(1px * var(--calendar-scale)) solid #aaa; /* Borde escalado */
+    color: #333; /* Texto oscuro */
+    padding: calc(10px * var(--calendar-scale)); /* Espaciado interno escalado */
+    border-radius: calc(5px * var(--calendar-scale)); /* Esquinas redondeadas escaladas */
+    cursor: pointer;
+    font-size: calc(16px * var(--calendar-scale)); /* Tamaño de fuente escalado */
+    transition: all 0.2s ease;
+}
+
+.nav-button:hover {
+    background: #d4c6a4; /* Fondo más oscuro al pasar el mouse */
+    color: #000; /* Texto más oscuro */
+}
+
+/* Grid del calendario */
+.calendar-grid {
+    flex: 1 1 auto; /* La cuadrícula se expande para ocupar el espacio restante */
+    display: grid;
+    grid-template-columns: repeat(7, minmax(30px, 1fr)); 
+    grid-auto-rows: 1fr; /* Filas adaptables */
+    gap: calc(5px * var(--calendar-scale)); /* Espaciado entre celdas escalado */
+    text-align: center;
+}
+
+.day-name {
+    font-weight: bold;
+    color: #555;
+    text-transform: uppercase;
+    margin-bottom: calc(10px * var(--calendar-scale)); /* Margen inferior escalado */
+}
+
+.day {
+    background: #fdfdfd; /* Fondo casi blanco */
+    border: calc(1px * var(--calendar-scale)) solid #ddd; /* Borde escalado */
+    border-radius: calc(5px * var(--calendar-scale)); /* Esquinas redondeadas escaladas */
+    padding: calc(15px * var(--calendar-scale)); /* Espaciado interno escalado */
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: calc(1.5vw * var(--calendar-scale)); /* Tamaño de fuente escalado */
+}
+
+.day:hover {
+    background: #eae0c8; /* Fondo beige al pasar el mouse */
+    color: #333; /* Texto más oscuro */
+}
+
+/* Resalta el día actual */
+.day.current {
+    background: #d4c6a4; /* Fondo beige oscuro */
+    color: #000; /* Texto más oscuro */
+    font-weight: bold;
+    border: calc(1px * var(--calendar-scale)) solid #aaa; /* Borde escalado */
+}

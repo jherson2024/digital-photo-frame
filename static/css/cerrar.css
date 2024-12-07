@@ -1,0 +1,14 @@
+.cerrar-class {
+    background-color: #ff4d4d; /* Rojo claro */
+    color: #fff; /* Texto blanco */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+    font-size: 23px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor a "pointer" */
+    transition: background-color 0.3s ease; /* Transición suave para hover */
+}
+
+.cerrar-class:hover {
+    background-color: #e60000; /* Rojo más oscuro en hover */
+}

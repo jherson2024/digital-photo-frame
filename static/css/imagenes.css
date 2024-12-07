@@ -1,0 +1,17 @@
+
+#image0 {
+    position: fixed; /* Para asegurar que permanezca fija */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: fill; /* Deforma para cubrir todo el espacio */
+    z-index: 2; /* Coloca la imagen al frente */
+}
+
+#image1 {
+    position: relative;
+    z-index: 1;
+    display: block;
+    object-fit: contain; //* Asegura comportamiento de imagen */
+}

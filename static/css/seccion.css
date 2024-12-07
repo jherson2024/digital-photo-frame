@@ -1,0 +1,68 @@
+/* Estilo general para la sección */
+#seccion {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+    gap: 20px; /* Espacio entre los álbumes */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    padding: 20px;
+    background-color: #f9f9f9; /* Fondo claro para la sección */
+    overflow-y: auto;
+}
+
+/* Estilo individual para cada álbum */
+#seccion .album-cover {
+    max-width: 100%;
+    height: auto; /* Ajusta automáticamente la altura según la proporción */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+#seccion img.foto-img {
+    max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto; /* Mantiene las proporciones de la imagen */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+
+/* Contenedor de cada álbum */
+#seccion div {
+    width: 300px; /* Ancho fijo para cada álbum */
+    background-color: #fff; /* Fondo blanco */
+    border: 1px solid #ddd; /* Borde ligero */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para el contenedor */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animación suave */
+}
+
+/* Efecto hover para el álbum */
+#seccion div:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15); /* Aumenta la sombra */
+}
+
+/* Título del álbum */
+#seccion h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center; /* Centra el título */
+}
+
+/* Descripción del álbum */
+#seccion p {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.4;
+    text-align: justify; /* Justifica el texto */
+    margin: 5px 0;
+}
+
+/* Fecha del álbum */
+#seccion p small {
+    color: #999; /* Color más claro para el texto pequeño */
+    font-size: 0.8em;
+    display: block;
+    text-align: right; /* Alinea la fecha a la derecha */
+}
+
